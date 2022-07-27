@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "247679535121",
+    "firebase_url": "https://marketwatch-58004.firebaseio.com",
+    "project_id": "marketwatch-58004",
+    "storage_bucket": "marketwatch-58004.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247679535121:android:a4d234f9828b9ca7",
+        "android_client_info": {
+          "package_name": "marketwatch.com.app.marketwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247679535121-9u7t91e5vtbhdpg28to31boqirtua0rk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "marketwatch.com.app.marketwatch",
+            "certificate_hash": "738975cba8cea271c1b3dce547fb0419b5ae5149"
+          }
+        },
+        {
+          "client_id": "247679535121-th2gq4ngmsga71fkfshg3h3vivsmkbbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "marketwatch.com.app.marketwatch",
+            "certificate_hash": "14d6e52a066cad567bf38e9d81172b5af45b52e2"
+          }
+        },
+        {
+          "client_id": "247679535121-28k034e02l87rih6k912iibdsqbv9nvc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "marketwatch.com.app.marketwatch",
+            "certificate_hash": "0652253e9f312add1cb64d8526683dbd37a3302b"
+          }
+        },
+        {
+          "client_id": "247679535121-48or1omucmanpuj2adq51ij2h1jmbbo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyAdQN8RLtfnEGjQf1FobGyg4HBXWTAVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247679535121-48or1omucmanpuj2adq51ij2h1jmbbo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
