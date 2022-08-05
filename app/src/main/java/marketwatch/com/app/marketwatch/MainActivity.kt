@@ -6,10 +6,6 @@ import android.os.Handler
 import android.os.Looper
 import android.text.Html
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -41,9 +37,12 @@ import com.google.android.gms.ads.RequestConfiguration
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import android.os.Build
+import android.view.*
 import android.view.animation.Animation
 import com.google.android.material.animation.AnimationUtils
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.pratik.marketwatchadmin.data.Req
+import marketwatch.com.app.marketwatch.data.AddPostData
 import marketwatch.com.app.marketwatch.ui.Education
 
 
@@ -110,7 +109,7 @@ class MainActivity : AppCompatActivity(), OnRefreshListener {
         }
         mAdView = findViewById<View>(R.id.adView) as AdView
         val adRequest = AdRequest.Builder().build()
-        mAdView!!.loadAd(adRequest)
+              mAdView!!.loadAd(adRequest)
         InterstitialAd.load(this,"ca-app-pub-2227111631738399/4386459572", adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.d("tag", adError?.toString())
@@ -123,7 +122,6 @@ class MainActivity : AppCompatActivity(), OnRefreshListener {
 
 
             }
-
 
         })
         setadapter();
@@ -143,7 +141,7 @@ class MainActivity : AppCompatActivity(), OnRefreshListener {
             if (mInterstitialAd != null) {
                 mInterstitialAd?.show(this)
             }
-        },4000)
+        },5000)
 
 
     }
@@ -182,6 +180,20 @@ class MainActivity : AppCompatActivity(), OnRefreshListener {
          }
 
      }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflator:MenuInflater=menuInflater;
+         inflator.inflate(R.menu.menu,menu)
+          return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menu_chat-> startActivity(Intent(this,RegisterActivity::class.java))
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {

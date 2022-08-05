@@ -13,18 +13,24 @@ class AppPreference(mContext: Context) {
     private val KEY_USERNAME = "username"
     private val editor: SharedPreferences.Editor
     var email: String?
+
         get() = mPreferences.getString(KEY_EMAIL, null)
         set(email) {
             editor.putString(KEY_EMAIL, email)
             editor.commit()
         }
 
-    fun setusername(email: String?) {
-        editor.putString(KEY_USERNAME, email)
-        editor.commit()
+    init {
+        mPreferences = mContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        editor = mPreferences.edit()
     }
 
-    fun getusername(): String? {
+    fun setuserName(email: String) {
+        editor.putString(KEY_USERNAME, email)
+        editor.commit();
+    }
+
+    fun getuserName(): String? {
         return mPreferences.getString(KEY_USERNAME, null)
     }
 
@@ -33,8 +39,4 @@ class AppPreference(mContext: Context) {
         editor.commit()
     }
 
-    init {
-        mPreferences = mContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
-        editor = mPreferences.edit()
-    }
 }
